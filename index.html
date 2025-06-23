@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GoExplore - Home</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Embedded CSS -->
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #ffffff; color: #333; line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none; color: inherit;
+    }
+
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      font-weight: 500;
+    }
+
+    #theme-toggle {
+      background: none;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-login, .btn-register {
+      padding: 6px 12px;
+      background: #ff6600;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .btn-login:hover, .btn-register:hover {
+      background: #e65c00;
+    }
+
+    /* 🌄 Hero Section */
+    .hero-banner {
+      background-image: url('hero2.jpg'); /* your travel image here */
+      background-size: cover;
+      background-position: center;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    /* 💬 Testimonials */
+    .testimonials {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #f9f9f9;
+    }
+
+    .testimonials h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .testimonial {
+      display: none;
+      font-size: 1.1rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      transition: all 0.5s ease;
+    }
+
+    .testimonial.active {
+      display: block;
+    }
+
+    .testimonial h4 {
+      margin-top: 1rem;
+      color: #004080;
+    }
+
+    /* Footer */
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 50px;
+    }
+
+    /* Dark Mode */
+    body.dark-mode {
+      background: #1b1b1b;
+      color: #eee;
+    }
+
+    body.dark-mode header {
+      background: #000;
+    }
+
+    body.dark-mode nav a {
+      color: #fff;
+    }
+
+    body.dark-mode .testimonial {
+      background: #2a2a2a;
+      color: #eee;
+    }
+
+    body.dark-mode .testimonials {
+      background: #111;
+    }
+
+    body.dark-mode footer {
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌍 Header -->
+  <header class="navbar">
+    <div class="logo">🌍 GoExplore</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="destination.html">Destinations</a>
+      <a href="hotel.html">Hotels</a>
+      <a href="dish.html">Dishes</a>
+      <a href="festivals.html">Festivals</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About us</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn-login">Login</a>
+      <a href="register.html" class="btn-register">Register</a>
+    </div>
+    <button id="theme-toggle">🌓</button>
+  </header>
+
+  <!-- 🌄 Hero Section -->
+  <section class="hero-banner">
+    <div class="hero-text">
+      <h1>Your Next Adventure Awaits! ✈️</h1>
+      <p>Explore the world with GoExplore</p>
+    </div>
+  </section>
+
+  <!-- 💬 Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Travelers Say 💬</h2>
+    <div class="carousel" id="testimonialCarousel">
+      <div class="testimonial active">
+        <p>"GoExplore made my honeymoon in Kerala magical! Everything was smooth and perfect."</p>
+        <h4>– Riya Sharma</h4>
+      </div>
+      <div class="testimonial">
+        <p>"A wonderful solo trip to Manali. Booking was easy, and the hotel was amazing!"</p>
+        <h4>– Arjun Verma</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Family trip to Goa was super fun. Dishes and hotel choices were just top-notch!"</p>
+        <h4>– Neha & Family</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer>
+    <p>&copy; 2025 GoExplore | Travel made easy ✈️</p>
+  </footer>
+
+  <!-- ✅ JavaScript -->
+  <script>
+    // Dark Mode Toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem("goExploreTheme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+
+    themeBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const theme = body.classList.contains("dark-mode") ? "dark" : "light";
+      localStorage.setItem("goExploreTheme", theme);
+    });
+
+    // Testimonials Carousel
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+
+    function rotateTestimonials() {
+      testimonials[currentTestimonial].classList.remove('active');
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      testimonials[currentTestimonial].classList.add('active');
+    }
+
+    setInterval(rotateTestimonials, 4000);
+  </script>
+
+</body>
+</html>

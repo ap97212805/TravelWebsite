@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoExplore - Festivals of India</title>
+
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      background-color: #004080; color: white; padding: 1rem 2rem;
+    }
+    .navbar .logo { font-size: 1.5rem; font-weight: bold; }
+    .navbar ul { display: flex; gap: 1rem; }
+    .navbar a {
+      color: white; padding: 0.5rem 1rem; border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: #0066cc;
+    }
+    #theme-toggle {
+      background: transparent; color: white; border: none;
+      cursor: pointer; font-size: 1.1rem;
+    }
+
+    .heading {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f0f8ff;
+    }
+
+    .festival-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .festival-card {
+      width: 280px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .festival-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    }
+    .festival-card img {
+      width: 100%; height: 180px; object-fit: cover;
+    }
+    .festival-card .info {
+      padding: 1rem;
+    }
+    .festival-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: #004080; color: white;
+      text-align: center; padding: 1rem;
+    }
+
+    body.dark-mode {
+      background-color: #121212; color: #e0e0e0;
+    }
+    body.dark-mode .navbar,
+    body.dark-mode footer {
+      background-color: #1a1a1a;
+    }
+    body.dark-mode .festival-card {
+      background-color: #1e1e1e;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .festival-grid {
+        flex-direction: column; align-items: center;
+      }
+    }
+
+
+
+    /* ------------------------------------------------ */
+    .auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+.btn-login, .btn-register {
+  padding: 6px 12px;
+  background: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.btn-login:hover, .btn-register:hover {
+  background: #e65c00;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- 🌍 Navbar -->
+  <header class="navbar">
+    <div class="logo">🌍 GoExplore</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="destination.html">Destinations</a>
+      <a href="hotel.html">Hotels</a>
+      <a href="dish.html">Dishes</a>
+      <a href="#">Festivals</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About us</a>
+      
+    </nav>
+    <div class="auth-buttons">
+        <a href="login.html" class="btn-login">Login</a>
+        <a href="register.html" class="btn-register">Register</a>
+    </div>
+
+    <button id="theme-toggle">🌓</button>
+
+
+  </header>
+
+  <!-- 🎉 Heading -->
+  <div class="heading">
+    <h1>Festivals of India</h1>
+    <p>Colorful celebrations from every corner of the country</p>
+  </div>
+
+  <!-- 🪔 Festival Cards -->
+  <section class="festival-grid">
+
+
+
+    <div class="festival-card">
+      <img src="Holi.jpg" alt="Holi">
+      <div class="info">
+        <h3>Holi</h3>
+        <p>The festival of colors, celebrated across India in spring with vibrant joy.</p>
+      </div>
+    </div>
+
+
+
+    <div class="festival-card">
+      <img src="diwali.jpg" alt="Diwali">
+      <div class="info">
+        <h3>Diwali</h3>
+        <p>The festival of lights — celebrating victory of good over evil with diyas & sweets.</p>
+      </div>
+    </div>
+
+
+
+    <div class="festival-card">
+      <img src="Eid.jpg" alt="Eid">
+      <div class="info">
+        <h3>Eid</h3>
+        <p>A festival of unity, prayer, and feasting observed after the holy month of Ramadan.</p>
+      </div>
+    </div>
+
+
+
+    <div class="festival-card">
+      <img src="Pongal.jpg" alt="Pongal">
+      <div class="info">
+        <h3>Pongal</h3>
+        <p>A South Indian harvest festival dedicated to the Sun God and prosperity.</p>
+      </div>
+    </div>
+
+
+
+
+    <div class="festival-card">
+      <img src="Durgapuja.jpg" alt="Durga Puja">
+      <div class="info">
+        <h3>Durga Puja</h3>
+        <p>West Bengal's biggest festival, worshipping Goddess Durga with pomp and art.</p>
+      </div>
+    </div>
+
+
+
+    <div class="festival-card">
+      <img src="Bihu.jpg" alt="Bihu">
+      <div class="info">
+        <h3>Bihu</h3>
+        <p>Traditional Assamese celebration marking harvest, dance, and cultural unity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer>
+    <p>&copy; 2025 GoExplore | Explore India’s vibrant culture 🎊</p>
+  </footer>
+
+  <!-- 🌗 Theme Toggle Script -->
+  <script>
+    const toggleBtn = document.getElementById("theme-toggle");
+    const body = document.body;
+    if (localStorage.getItem("goExploreTheme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+    toggleBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      localStorage.setItem("goExploreTheme", body.classList.contains("dark-mode") ? "dark" : "light");
+    });
+  </script>
+</body>
+</html>

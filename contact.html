@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GoExplore - Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      font-weight: 500;
+    }
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-login, .btn-register {
+      padding: 6px 12px;
+      background: #ff6600;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .btn-login:hover, .btn-register:hover {
+      background: #e65c00;
+    }
+    #theme-toggle {
+      background: none;
+      color: white;
+      border: 2px solid white;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .contact {
+      padding: 3rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #004080;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    form input, form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background: #004080;
+      color: white;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    form button:hover {
+      background: #003366;
+    }
+    .map {
+      margin-top: 2rem;
+    }
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+    }
+
+    footer {
+      background-color: #004080;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    body.dark-mode {
+      background: #1b1b1b;
+      color: #eee;
+    }
+    body.dark-mode header,
+    body.dark-mode footer {
+      background: #000;
+    }
+    body.dark-mode nav a,
+    body.dark-mode .btn-login,
+    body.dark-mode .btn-register {
+      color: #fff;
+    }
+    body.dark-mode form input,
+    body.dark-mode form textarea {
+      background: #333;
+      color: #fff;
+      border: 1px solid #666;
+    }
+    /* ----------------------------------------------- */
+
+
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      background-color: #004080; color: white; padding: 1rem 2rem;
+    }
+    .navbar .logo { font-size: 1.5rem; font-weight: bold; }
+    .navbar ul { display: flex; gap: 1rem; }
+    .navbar a {
+      color: white; padding: 0.5rem 1rem; border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: #0066cc;
+    }
+
+    /* ------------------------------------------ */
+  </style>
+</head>
+<body>
+
+  <!-- 🌍 Header -->
+  <header class="navbar">
+    <div class="logo">🌍 GoExplore</div>
+    <nav>
+    
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="destination.html">Destinations</a>
+      <a href="hotel.html">Hotels</a>
+      <a href="dish.html">Dishes</a>
+      <a href="festivals.html">Festivals</a>
+      <a href="booking.html">Booking</a>
+      <a href="#">Contact</a>
+      <a href="about.html">About us</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn-login">Login</a>
+      <a href="register.html" class="btn-register">Register</a>
+    </div>
+    <button id="theme-toggle">🌓</button>
+  </header>
+
+  <!-- Contact Form Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Google Maps Embed -->
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.665994253874!2d80.99726807485947!3d26.88416206294786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2e577a8eaa7%3A0x3e8c2bb1a7cb993f!2sVidya%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1689336993533!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 GoExplore | Let’s Connect 🤝</p>
+  </footer>
+
+  <!-- JS for Theme Toggle -->
+  <script>
+    const themeBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem("goExploreTheme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+
+    themeBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const theme = body.classList.contains("dark-mode") ? "dark" : "light";
+      localStorage.setItem("goExploreTheme", theme);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GoExplore - Packages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header nav a {
+      color: #fff;
+      font-weight: 500;
+    }
+    #theme-toggle {
+      background: none;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-login, .btn-register {
+      padding: 6px 12px;
+      background: #ff6600;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .btn-login:hover, .btn-register:hover {
+      background: #e65c00;
+    }
+
+    .packages {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .packages h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    .package-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .package-card {
+      width: 280px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #f8f8f8;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .package-card:hover {
+      transform: translateY(-5px);
+    }
+    .package-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .package-info {
+      padding: 1rem;
+    }
+    .package-info h3 {
+      color: #004080;
+      margin-bottom: 0.5rem;
+    }
+    .package-info p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .book-btn {
+      display: inline-block;
+      background: #ff6600;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .book-btn:hover {
+      background: #e65c00;
+    }
+
+    footer {
+      background: #004080;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 50px;
+    }
+
+    body.dark-mode {
+      background: #1b1b1b;
+      color: #eee;
+    }
+    body.dark-mode header {
+      background: #000;
+    }
+    body.dark-mode nav a {
+      color: #fff;
+    }
+    body.dark-mode .package-card {
+      background: #2a2a2a;
+      color: #fff;
+    }
+    body.dark-mode .package-info p {
+      color: #ccc;
+    }
+    body.dark-mode footer {
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🌍 Header -->
+  <header class="navbar">
+    <div class="logo">🌍 GoExplore</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#">Packages</a>
+      <a href="destination.html">Destinations</a>
+      <a href="hotel.html">Hotels</a>
+      <a href="dish.html">Dishes</a>
+      <a href="festivals.html">Festivals</a>
+      <a href="booking.html">Booking</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About us</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn-login">Login</a>
+      <a href="register.html" class="btn-register">Register</a>
+    </div>
+    <button id="theme-toggle">🌓</button>
+  </header>
+
+  <!-- 📦 Packages Section -->
+  <section class="packages">
+    <h2>Travel Packages</h2>
+    <div class="package-grid">
+
+
+
+      <div class="package-card">
+        <!-- 📸 Image for Goa Getaway -->
+        <img src="Goagetaway.jpg" alt="Goa Tour">
+        <div class="package-info">
+          <h3>Goa Getaway</h3>
+          <p>3 Nights | ₹8,999</p>
+          <a href="booking.html" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+
+
+      <div class="package-card">
+        <!-- 📸 Image for Kashmir Paradise -->
+        <img src="Kashmirparadise.jpg" alt="Kashmir Tour">
+        <div class="package-info">
+          <h3>Kashmir Paradise</h3>
+          <p>5 Nights | ₹12,999</p>
+          <a href="booking.html" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+
+
+      <div class="package-card">
+        <!-- 📸 Image for Royal Rajasthan -->
+        <img src="rajasthan.jpg" alt="Rajasthan Tour">
+        <div class="package-info">
+          <h3>Royal Rajasthan</h3>
+          <p>4 Nights | ₹10,499</p>
+          <a href="booking.html" class="book-btn">Book Now</a>
+        </div>
+      </div>
+
+
+
+      <div class="package-card">
+        <!-- 📸 Image for Kerala Escape -->
+        <img src="Keralaescape.jpg" alt="Kerala Tour">
+        <div class="package-info">
+          <h3>Kerala Escape</h3>
+          <p>6 Nights | ₹14,999</p>
+          <a href="booking.html" class="book-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📞 Footer -->
+  <footer>
+    <p>&copy; 2025 GoExplore | Travel made easy ✈️</p>
+  </footer>
+
+  <!-- ✅ Embedded JavaScript -->
+  <script>
+    // 🌙 Dark Mode Toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem("goExploreTheme") === "dark") {
+      body.classList.add("dark-mode");
+    }
+
+    themeBtn.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      const theme = body.classList.contains("dark-mode") ? "dark" : "light";
+      localStorage.setItem("goExploreTheme", theme);
+    });
+  </script>
+</body>
+</html>
